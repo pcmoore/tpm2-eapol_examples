@@ -1,2 +1,2 @@
-# TPM Extended Authoriztion Policy Example Scripts
+# TPM Extended Authorization Policy Example Scripts
 
