@@ -155,7 +155,7 @@ luks_len=$(str_len $luks)
 tpm2_createprimary -C p -c $tdir/tpm_ctx_b
 tpm2_startauthsession -S $tdir/tpm_session_b -c $tdir/tpm_ctx_b
 tpm2_policypcr -S $tdir/tpm_session_b -l $TPM_PCRS_DEF -f $pcrs_prod
-echo "0x00000001" | xxd -r -p | tpm2_policynv -S $tdir/tpm_session_b \
+echo $TPM_POL_VERSION | xxd -r -p | tpm2_policynv -S $tdir/tpm_session_b \
 	-i- $TPM_NV_VERSION eq -L $pol_luks
 tpm2_policyauthorize -S $tdir/tpm_session_b -n $tdir/pubkey_name_a \
 	-L $tdir/tpm_policy_b
