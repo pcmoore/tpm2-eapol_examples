@@ -37,7 +37,7 @@ function error_check() {
 }
 
 function usage() {
-	echo "usage: atomix-tpm-setup.sh <pcr_prod.bin>"
+	echo "usage: atomix-tpm-policy.sh <pcr_prod.bin>"
 	echo "  all pcr files should contain only $TPM_PCRS_DEF values"
 	exit 1
 }
